@@ -24,9 +24,9 @@ export class MarketplaceComponent implements OnInit {
     this.router.navigate(['albums', clickedAlbum.$key]);
   }
 
-  filterByAlbum: string = "allAlbums";
+  filterByArtist: string = "allArtists";
 
   onChange(optionFromMenu) {
-    this.filterByAlbum = optionFromMenu;
+    this.filterByArtist = optionFromMenu;
   }
 }

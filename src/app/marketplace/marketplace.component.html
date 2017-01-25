@@ -1,11 +1,12 @@
 <h2>Marketplace</h2>
 
 <select (change)="onChange($event.target.value)">
-  <option value="allAlbums" selected="selected">All</option>
-  <option value="pulse">Pulse</option>
+  <option value="allArtists" selected="selected">All</option>
+  <option value="PinkFloyd">Pink Floyd</option>
+  <option value="AniDiFranco">Ani DiFranco</option>
 </select>
 
-<div *ngFor="let album of albums | async | title:filterByAlbum"  class="panel panel-default">
+<div *ngFor="let album of albums | async | artist:filterByArtist"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
     <div *ngIf="currentRoute === '/admin'">
