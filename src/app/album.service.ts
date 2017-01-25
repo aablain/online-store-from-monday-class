@@ -22,6 +22,13 @@ export class AlbumService {
     return this.angularFire.database.object('/albums/' + albumId);// firebase is searching for us
   }
 
+  updateAlbum(localUpdatedAlbum){
+    var albumEntryInFirebase = this.getAlbumById(localUpdatedAlbum.$key);
+    albumEntryInFirebase.update({
+      title: localUpdatedAlbum.title,
+      artist: localUpdatedAlbum.artist,
+      description: localUpdatedAlbum.description});
+  }
 
 
 }
