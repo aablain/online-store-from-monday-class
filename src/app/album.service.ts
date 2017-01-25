@@ -19,7 +19,7 @@ export class AlbumService {
   }
 
   getAlbumById(albumId: string){
-    return this.angularFire.database.object('/albums/' + albumId);
+    return this.angularFire.database.object('/albums/' + albumId);// firebase is searching for us
   }
 
 
