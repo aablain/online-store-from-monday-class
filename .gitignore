@@ -1,5 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+/src/app/api-keys222.ts
+
 # compiled output
 /dist
 /tmp
