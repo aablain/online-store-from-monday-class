@@ -6,7 +6,9 @@
   <option value="AniDiFranco">Ani DiFranco</option>
 </select>
 
-<div *ngFor="let album of albums | async | artist:filterByArtist"  class="panel panel-default">
+<input [(ngModel)]="term">
+
+<div *ngFor="let album of albums | async | artist:filterByArtist | search:term"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(album)"><em>{{album.title}}</em> by {{album.artist}}</h3>
     <div *ngIf="currentRoute === '/admin'">

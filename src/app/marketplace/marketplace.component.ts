@@ -29,4 +29,5 @@ export class MarketplaceComponent implements OnInit {
   onChange(optionFromMenu) {
     this.filterByArtist = optionFromMenu;
   }
+
 }
